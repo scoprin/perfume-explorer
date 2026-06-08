@@ -1,11 +1,26 @@
 :root {
-    --charcoal: #121212;
-    --dark-grey: #1e1e1e;
-    --amber: #d4af37;
-    --gold: #ffbf00;
-    --text-main: #e0e0e0;
-    --text-dim: #a0a0a0;
-    --border: #333333;
+    --bg-deep: #0a0a0a;
+    --bg-card: #141414;
+    --accent-gold: #c5a059;
+    --accent-amber: #ffbf00;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a0a0a0;
+    --border-dim: #222;
+    --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    
+    /* Accord Colors */
+    --clr-woody: #8b5a2b;
+    --clr-amber: #ff8c00;
+    --clr-citrus: #ffd700;
+    --clr-floral: #db7093;
+    --clr-spicy: #b22222;
+    --clr-sweet: #ff69b4;
+    --clr-fresh: #00ced1;
+    --clr-musky: #dcdcdc;
+    --clr-vanilla: #f3e5ab;
+    --clr-leather: #483c32;
+    --clr-powdery: #e6e6fa;
+    --clr-green: #228b22;
 }
 
 * {
@@ -15,162 +30,299 @@
 }
 
 body {
-    background-color: var(--charcoal);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
+/* Header */
 header {
-    padding: 60px 0 40px;
+    padding: 80px 0 50px;
     text-align: center;
-    border-bottom: 1px solid var(--border);
+    background: linear-gradient(to bottom, #111, var(--bg-deep));
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    letter-spacing: 0.5rem;
-    color: var(--amber);
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    letter-spacing: 0.8rem;
+    color: var(--accent-gold);
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
-.subtitle {
-    color: var(--text-dim);
-    font-weight: 300;
+.tagline {
+    font-weight: 200;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 30px;
+    letter-spacing: 0.4rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-size: 0.9rem;
 }
 
-.search-bar {
-    max-width: 600px;
+.search-container {
+    max-width: 700px;
     margin: 0 auto;
+    position: relative;
 }
 
 #perfumeSearch {
     width: 100%;
-    padding: 15px 25px;
-    background: var(--dark-grey);
-    border: 1px solid var(--border);
-    border-radius: 50px;
+    padding: 18px 30px 18px 60px;
+    background: #1a1a1a;
+    border: 1px solid var(--border-dim);
+    border-radius: 4px;
     color: white;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.4s ease;
+    box-shadow: var(--shadow);
 }
 
 #perfumeSearch:focus {
     outline: none;
-    border-color: var(--amber);
+    border-color: var(--accent-gold);
+    background: #222;
 }
 
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-gold);
+}
+
+/* Grid */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 40px 0;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 60px 0;
 }
 
+/* Card */
 .card {
-    background: var(--dark-grey);
-    border: 1px solid var(--border);
-    padding: 25px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dim);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
-    transition: transform 0.3s, border-color 0.3s;
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    border-color: var(--amber);
+    transform: translateY(-10px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
 }
 
-.card h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--amber);
-    margin-bottom: 5px;
+.card-image-container {
+    height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 
-.card .brand {
-    font-size: 0.8rem;
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-brand {
+    font-size: 0.75rem;
     text-transform: uppercase;
-    color: var(--text-dim);
+    letter-spacing: 0.2rem;
+    color: var(--accent-gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.card-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
     margin-bottom: 15px;
+    color: var(--text-primary);
 }
 
-.card .accords {
+/* Accord Bars */
+.accord-container {
+    margin-top: 15px;
+}
+
+.accord-row {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: auto;
+    align-items: center;
+    margin-bottom: 6px;
 }
 
-.tag {
-    font-size: 0.7rem;
-    padding: 3px 8px;
-    background: #2a2a2a;
-    border: 1px solid var(--border);
-    color: var(--text-dim);
+.accord-label {
+    width: 80px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.accord-bar-bg {
+    flex-grow: 1;
+    height: 8px;
+    background: #222;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.accord-bar-fill {
+    height: 100%;
+    border-radius: 4px;
 }
 
 /* Modal */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-overlay {
+    background: rgba(0,0,0,0.95);
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .modal-content {
-    background-color: var(--dark-grey);
-    margin: 5% auto;
-    padding: 40px;
-    border: 1px solid var(--amber);
-    width: 90%;
-    max-width: 800px;
     position: relative;
+    background: var(--bg-card);
+    margin: 2% auto;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid var(--accent-gold);
+    animation: modalIn 0.5s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes modalIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .close-button {
     position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 28px;
-    color: var(--text-dim);
+    right: 25px;
+    top: 20px;
+    font-size: 35px;
+    color: var(--text-secondary);
     cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s;
 }
 
-.modal-details h2 {
-    font-family: 'Playfair Display', serif;
-    color: var(--amber);
-    font-size: 2.5rem;
+.close-button:hover {
+    color: var(--accent-gold);
 }
 
-.modal-section {
-    margin-top: 25px;
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 50px;
 }
 
-.modal-section h4 {
+@media (max-width: 800px) {
+    .modal-body { grid-template-columns: 1fr; padding: 30px; }
+}
+
+.modal-image-col img {
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: var(--shadow);
+}
+
+.modal-brand {
+    color: var(--accent-gold);
     text-transform: uppercase;
-    color: var(--amber);
+    letter-spacing: 0.3rem;
     font-size: 0.9rem;
     margin-bottom: 10px;
-    border-bottom: 1px solid var(--border);
 }
 
-.note-list {
+.modal-name {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.modal-desc {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Pyramid */
+.pyramid-section {
+    margin-top: 40px;
+}
+
+.pyramid-tier {
+    margin-bottom: 25px;
+}
+
+.tier-label {
+    color: var(--accent-gold);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.notes-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
+}
+
+.note-chip {
+    padding: 6px 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    font-size: 0.8rem;
+    color: var(--text-primary);
+}
+
+footer {
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-dim);
+    margin-top: 50px;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
 }

@@ -3,33 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfume Explorer | Essence & Accords</title>
+    <title>Sillage | Haute Parfumerie Explorer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>ESSENCE</h1>
-            <p class="subtitle">A Curation of Fine Fragrances</p>
-            <div class="search-bar">
-                <input type="text" id="perfumeSearch" placeholder="Search by name, note, or accord...">
+            <h1 class="logo">SILLAGE</h1>
+            <p class="tagline">Explore the Architecture of Scent</p>
+            <div class="search-container">
+                <input type="text" id="perfumeSearch" placeholder="Search by name, brand, note, or accord...">
+                <div class="search-icon">
+                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="container">
         <div id="perfumeGrid" class="grid">
-            <!-- Perfume cards will be injected here -->
+            <!-- Luxury perfume cards injected here -->
         </div>
     </main>
 
     <div id="modal" class="modal">
+        <div class="modal-overlay"></div>
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <div id="modalDetails"></div>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SILLAGE. Inspired by Fragrantica.</p>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
