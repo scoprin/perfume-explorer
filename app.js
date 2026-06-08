@@ -3,7 +3,7 @@ const perfumeData = [
         name: "Aventus",
         brand: "Creed",
         year: 2010,
-        image: "https://images.unsplash.com/photo-1592187332897-dc4457f59d6e?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=800",
         description: "A legendary fragrance celebrating strength, power, and success. It opens with an iconic blast of pineapple and black currant.",
         accords: [
             { name: "fruity", value: 95, color: "var(--clr-fresh)" },
@@ -20,7 +20,7 @@ const perfumeData = [
         name: "Baccarat Rouge 540",
         brand: "Maison Francis Kurkdjian",
         year: 2015,
-        image: "https://images.unsplash.com/photo-1512411516752-77254042c902?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1544608310-24430fac97a7?auto=format&fit=crop&q=80&w=800",
         description: "A poetic alchemy of jasmine, saffron, and amberwood. Known for its airy, crystal-like sweetness and incredible trail.",
         accords: [
             { name: "amber", value: 100, color: "var(--clr-amber)" },
@@ -37,7 +37,7 @@ const perfumeData = [
         name: "Tobacco Vanille",
         brand: "Tom Ford",
         year: 2007,
-        image: "https://images.unsplash.com/photo-1550266014-9989f53e070c?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1544608310-24430fac97a7?auto=format&fit=crop&q=80&w=800",
         description: "A warm, opulent journey into a London gentleman's club. Tobacco leaf meets creamy vanilla and spicy accords.",
         accords: [
             { name: "tobacco", value: 95, color: "var(--clr-leather)" },
@@ -54,7 +54,7 @@ const perfumeData = [
         name: "Sauvage",
         brand: "Dior",
         year: 2015,
-        image: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1558507652-2d9626c4e67a?auto=format&fit=crop&q=80&w=800",
         description: "A radically fresh composition, inspired by wide-open spaces and a desert landscape under the blue sky.",
         accords: [
             { name: "fresh", value: 95, color: "var(--clr-fresh)" },
@@ -71,7 +71,7 @@ const perfumeData = [
         name: "Angels' Share",
         brand: "Kilian Paris",
         year: 2020,
-        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800",
         description: "A boozy, gourmand masterpiece inspired by Hennessy cognac cellars. Rich with cinnamon, tonka, and oak.",
         accords: [
             { name: "boozy", value: 95, color: "var(--clr-amber)" },
@@ -105,7 +105,7 @@ const perfumeData = [
         name: "Layton",
         brand: "Parfums de Marly",
         year: 2016,
-        image: "https://images.unsplash.com/photo-1550433161-867980537be6?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=800",
         description: "A royal blue aromatic fragrance that balances crisp apple and lavender with a deep, creamy vanilla base.",
         accords: [
             { name: "vanilla", value: 95, color: "var(--clr-vanilla)" },
@@ -122,7 +122,7 @@ const perfumeData = [
         name: "Erba Pura",
         brand: "Xerjoff",
         year: 2019,
-        image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1623512398506-69f3d17ca85e?auto=format&fit=crop&q=80&w=800",
         description: "A modern basket of Mediterranean fruits and citrus that dries down into a long-lasting, sensual musk and vanilla.",
         accords: [
             { name: "fruity", value: 100, color: "var(--clr-sweet)" },
@@ -139,7 +139,7 @@ const perfumeData = [
         name: "Hacivat",
         brand: "Nishane",
         year: 2017,
-        image: "https://images.unsplash.com/photo-1562522513-a22a63a0e21e?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&q=80&w=800",
         description: "A tribute to elegance and love of art. A long-lasting woody fragrance with a dominant, crisp pineapple and oakmoss trail.",
         accords: [
             { name: "woody", value: 95, color: "var(--clr-woody)" },
@@ -156,7 +156,7 @@ const perfumeData = [
         name: "Bleu de Chanel",
         brand: "Chanel",
         year: 2010,
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1438901713224-9bb0dc18df88?auto=format&fit=crop&q=80&w=800",
         description: "The ultimate blue fragrance. A tribute to masculine freedom in an aromatic-woody trail with captivating citrus notes.",
         accords: [
             { name: "citrus", value: 95, color: "var(--clr-citrus)" },
@@ -190,7 +190,7 @@ const perfumeData = [
         name: "Naxos",
         brand: "Xerjoff",
         year: 2015,
-        image: "https://images.unsplash.com/photo-1599305090598-fe1757bf4676?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1471943311424-646960669fba?auto=format&fit=crop&q=80&w=800",
         description: "A celebration of Sicily. Bright citrus meets sweet honey and spicy tobacco, grounded by lavender and vanilla.",
         accords: [
             { name: "sweet", value: 95, color: "var(--clr-sweet)" },
@@ -207,7 +207,7 @@ const perfumeData = [
         name: "Side Effect",
         brand: "Initio",
         year: 2016,
-        image: "https://images.unsplash.com/photo-1569336415962-a4bd9f6dfc0f?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1527231441113-f932e616bc21?auto=format&fit=crop&q=80&w=800",
         description: "A daring, boozy composition that envelops the wearer in a cloud of rum, vanilla, and high-quality tobacco.",
         accords: [
             { name: "boozy", value: 95, color: "var(--clr-amber)" },
@@ -224,7 +224,7 @@ const perfumeData = [
         name: "Philosykos",
         brand: "Diptyque",
         year: 1996,
-        image: "https://images.unsplash.com/photo-1516055517713-ef37651239c0?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1543834164-96d594b96898?auto=format&fit=crop&q=80&w=800",
         description: "The ultimate fig fragrance. An ode to the entire fig tree: the green leaves, the white wood, and the milky fruit.",
         accords: [
             { name: "green", value: 100, color: "var(--clr-fresh)" },
@@ -241,7 +241,7 @@ const perfumeData = [
         name: "Gypsy Water",
         brand: "Byredo",
         year: 2008,
-        image: "https://images.unsplash.com/photo-1520121401995-928cd50d4e27?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=800",
         description: "A glamorization of the Romani lifestyle. Fresh soil, deep forests, and campfires; a beautiful nomadic dream.",
         accords: [
             { name: "woody", value: 90, color: "var(--clr-woody)" },
@@ -326,7 +326,7 @@ const perfumeData = [
         name: "Mojave Ghost",
         brand: "Byredo",
         year: 2014,
-        image: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1558507652-2d9626c4e67a?auto=format&fit=crop&q=80&w=800",
         description: "Inspired by the soulful beauty of the Mojave Desert and the rare ghost flower that blooms in its arid ground.",
         accords: [
             { name: "musky", value: 95, color: "var(--clr-musky)" },
@@ -377,7 +377,7 @@ const perfumeData = [
         name: "Wood Sage & Sea Salt",
         brand: "Jo Malone London",
         year: 2014,
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1438901713224-9bb0dc18df88?auto=format&fit=crop&q=80&w=800",
         description: "Escape the everyday along the windswept shore. Air mingling with sea salt and the earthy, woody scent of sage.",
         accords: [
             { name: "salty", value: 100, color: "var(--clr-fresh)" },
@@ -840,93 +840,75 @@ const modal = document.getElementById('modal');
 const modalDetails = document.getElementById('modalDetails');
 const closeButton = document.querySelector('.close-button');
 
-/**
- * Robustly renders the perfume cards into the grid.
- * Optimized to handle larger datasets efficiently.
- */
 function displayPerfumes(perfumes) {
-    // Clear the grid first
     grid.innerHTML = '';
-    
-    // Create a fragment for performance
     const fragment = document.createDocumentFragment();
-    
     perfumes.forEach(p => {
         const card = document.createElement('div');
         card.className = 'card';
-        
-        const accordHtml = p.accords.map(a => `
+        const accordHtml = p.accords.map(a => \`
             <div class="accord-row">
-                <div class="accord-label">${a.name}</div>
+                <div class="accord-label">\${a.name}</div>
                 <div class="accord-bar-bg">
-                    <div class="accord-bar-fill" style="width: ${a.value}%; background-color: ${a.color}"></div>
+                    <div class="accord-bar-fill" style="width: \${a.value}%; background-color: \${a.color}"></div>
                 </div>
             </div>
-        `).join('');
-
-        card.innerHTML = `
+        \`).join('');
+        card.innerHTML = \`
             <div class="card-image-container">
-                <img src="${p.image}" class="card-image" alt="${p.name}" loading="lazy">
+                <img src="\${p.image}" class="card-image" alt="\${p.name}" loading="lazy">
             </div>
             <div class="card-info">
-                <div class="card-brand">${p.brand}</div>
-                <div class="card-name">${p.name}</div>
+                <div class="card-brand">\${p.brand}</div>
+                <div class="card-name">\${p.name}</div>
                 <div class="accord-container">
-                    ${accordHtml}
+                    \${accordHtml}
                 </div>
             </div>
-        `;
+        \`;
         card.onclick = () => showModal(p);
         fragment.appendChild(card);
     });
-    
     grid.appendChild(fragment);
 }
 
-/**
- * Displays the modal with detailed perfume information.
- */
 function showModal(p) {
-    modalDetails.innerHTML = `
+    modalDetails.innerHTML = \`
         <div class="modal-body">
             <div class="modal-image-col">
-                <img src="${p.image}" alt="${p.name}">
+                <img src="\${p.image}" alt="\${p.name}">
             </div>
             <div class="modal-info-col">
-                <div class="modal-brand">${p.brand} (${p.year})</div>
-                <div class="modal-name">${p.name}</div>
-                <p class="modal-desc">${p.description}</p>
-                
+                <div class="modal-brand">\${p.brand} (\${p.year})</div>
+                <div class="modal-name">\${p.name}</div>
+                <p class="modal-desc">\${p.description}</p>
                 <div class="pyramid-section">
                     <div class="pyramid-tier">
                         <div class="tier-label">Top Notes</div>
                         <div class="notes-flex">
-                            ${p.pyramid.top.map(n => `<span class="note-chip">${n}</span>`).join('')}
+                            \${p.pyramid.top.map(n => '<span class="note-chip">' + n + '</span>').join('')}
                         </div>
                     </div>
                     <div class="pyramid-tier">
                         <div class="tier-label">Heart Notes</div>
                         <div class="notes-flex">
-                            ${p.pyramid.heart.map(n => `<span class="note-chip">${n}</span>`).join('')}
+                            \${p.pyramid.heart.map(n => '<span class="note-chip">' + n + '</span>').join('')}
                         </div>
                     </div>
                     <div class="pyramid-tier">
                         <div class="tier-label">Base Notes</div>
                         <div class="notes-flex">
-                            ${p.pyramid.base.map(n => `<span class="note-chip">${n}</span>`).join('')}
+                            \${p.pyramid.base.map(n => '<span class="note-chip">' + n + '</span>').join('')}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    `;
+    \`;
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
 
-/**
- * Debounced search function to filter the perfume list.
- */
 let searchTimeout;
 searchInput.oninput = (e) => {
     clearTimeout(searchTimeout);
@@ -954,5 +936,4 @@ window.onclick = (e) => {
     if (e.target.className === 'modal-overlay') closeModal(); 
 };
 
-// Initial Load
 displayPerfumes(perfumeData);
