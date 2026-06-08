@@ -50,5 +50,5 @@ Experience the collection: [perfume-explorer-scoprint.netlify.app](https://perfu
 
 ---
 
-**Author:** [Mustafa Ekrem Yılmaz (scoprin)](https://github.com/scoprin)  
+**Author:** [scoprin](https://github.com/scoprin)  
 *Crafted with precision.*
