@@ -411,7 +411,7 @@ const perfumeData = [
         name: "L'Air du Desert Marocain",
         brand: "Tauer",
         year: 2005,
-        image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1509316785289-025f5b846b33?auto=format&fit=crop&q=80&w=800",
         description: "An indie masterpiece. Captures the scent of a Moroccan night: warm wind, spices, and the vast desert sky.",
         accords: [
             { name: "amber", value: 100, color: "var(--clr-amber)" },
@@ -841,31 +841,32 @@ const modalDetails = document.getElementById('modalDetails');
 const closeButton = document.querySelector('.close-button');
 
 function displayPerfumes(perfumes) {
+    if (!grid) return;
     grid.innerHTML = '';
     const fragment = document.createDocumentFragment();
     perfumes.forEach(p => {
         const card = document.createElement('div');
         card.className = 'card';
-        const accordHtml = p.accords.map(a => \`
+        const accordHtml = p.accords.map(a => `
             <div class="accord-row">
-                <div class="accord-label">\${a.name}</div>
+                <div class="accord-label">${a.name}</div>
                 <div class="accord-bar-bg">
-                    <div class="accord-bar-fill" style="width: \${a.value}%; background-color: \${a.color}"></div>
+                    <div class="accord-bar-fill" style="width: ${a.value}%; background-color: ${a.color}"></div>
                 </div>
             </div>
-        \`).join('');
-        card.innerHTML = \`
+        `).join('');
+        card.innerHTML = `
             <div class="card-image-container">
-                <img src="\${p.image}" class="card-image" alt="\${p.name}" loading="lazy">
+                <img src="${p.image}" class="card-image" alt="${p.name}" loading="lazy">
             </div>
             <div class="card-info">
-                <div class="card-brand">\${p.brand}</div>
-                <div class="card-name">\${p.name}</div>
+                <div class="card-brand">${p.brand}</div>
+                <div class="card-name">${p.name}</div>
                 <div class="accord-container">
-                    \${accordHtml}
+                    ${accordHtml}
                 </div>
             </div>
-        \`;
+        `;
         card.onclick = () => showModal(p);
         fragment.appendChild(card);
     });
@@ -873,67 +874,72 @@ function displayPerfumes(perfumes) {
 }
 
 function showModal(p) {
-    modalDetails.innerHTML = \`
+    if (!modalDetails || !modal) return;
+    modalDetails.innerHTML = `
         <div class="modal-body">
             <div class="modal-image-col">
-                <img src="\${p.image}" alt="\${p.name}">
+                <img src="${p.image}" alt="${p.name}">
             </div>
             <div class="modal-info-col">
-                <div class="modal-brand">\${p.brand} (\${p.year})</div>
-                <div class="modal-name">\${p.name}</div>
-                <p class="modal-desc">\${p.description}</p>
+                <div class="modal-brand">${p.brand} (${p.year})</div>
+                <div class="modal-name">${p.name}</div>
+                <p class="modal-desc">${p.description}</p>
                 <div class="pyramid-section">
                     <div class="pyramid-tier">
                         <div class="tier-label">Top Notes</div>
                         <div class="notes-flex">
-                            \${p.pyramid.top.map(n => '<span class="note-chip">' + n + '</span>').join('')}
+                            ${p.pyramid.top.map(n => '<span class="note-chip">' + n + '</span>').join('')}
                         </div>
                     </div>
                     <div class="pyramid-tier">
                         <div class="tier-label">Heart Notes</div>
                         <div class="notes-flex">
-                            \${p.pyramid.heart.map(n => '<span class="note-chip">' + n + '</span>').join('')}
+                            ${p.pyramid.heart.map(n => '<span class="note-chip">' + n + '</span>').join('')}
                         </div>
                     </div>
                     <div class="pyramid-tier">
                         <div class="tier-label">Base Notes</div>
                         <div class="notes-flex">
-                            \${p.pyramid.base.map(n => '<span class="note-chip">' + n + '</span>').join('')}
+                            ${p.pyramid.base.map(n => '<span class="note-chip">' + n + '</span>').join('')}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    \`;
+    `;
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
 
 let searchTimeout;
-searchInput.oninput = (e) => {
-    clearTimeout(searchTimeout);
-    searchTimeout = setTimeout(() => {
-        const term = e.target.value.toLowerCase();
-        const filtered = perfumeData.filter(p => 
-            p.name.toLowerCase().includes(term) ||
-            p.brand.toLowerCase().includes(term) ||
-            p.accords.some(a => a.name.toLowerCase().includes(term)) ||
-            p.pyramid.top.some(n => n.toLowerCase().includes(term)) ||
-            p.pyramid.heart.some(n => n.toLowerCase().includes(term)) ||
-            p.pyramid.base.some(n => n.toLowerCase().includes(term))
-        );
-        displayPerfumes(filtered);
-    }, 200);
-};
+if (searchInput) {
+    searchInput.oninput = (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const term = e.target.value.toLowerCase();
+            const filtered = perfumeData.filter(p => 
+                p.name.toLowerCase().includes(term) ||
+                p.brand.toLowerCase().includes(term) ||
+                p.accords.some(a => a.name.toLowerCase().includes(term)) ||
+                p.pyramid.top.some(n => n.toLowerCase().includes(term)) ||
+                p.pyramid.heart.some(n => n.toLowerCase().includes(term)) ||
+                p.pyramid.base.some(n => n.toLowerCase().includes(term))
+            );
+            displayPerfumes(filtered);
+        }, 200);
+    };
+}
 
 function closeModal() {
+    if (!modal) return;
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
 
-closeButton.onclick = closeModal;
+if (closeButton) closeButton.onclick = closeModal;
+
 window.onclick = (e) => { 
-    if (e.target.className === 'modal-overlay') closeModal(); 
+    if (e.target.className === 'modal-overlay' || e.target.className === 'modal') closeModal(); 
 };
 
-displayPerfumes(perfumeData);
+if (grid) displayPerfumes(perfumeData);
