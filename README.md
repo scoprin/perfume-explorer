@@ -12,4 +12,4 @@ A clean, beautiful, minimalist dark-mode single-page application for exploring h
 This project is ready to be deployed to [Netlify](https://www.netlify.com/). Simply connect your GitHub repository.
 
 ---
-Auto-build triggered: Monday, June 8, 2026.
+Final deploy trigger: Monday, June 8, 2026.
