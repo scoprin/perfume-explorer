@@ -12,4 +12,4 @@ A clean, beautiful, minimalist dark-mode single-page application for exploring h
 This project is ready to be deployed to [Netlify](https://www.netlify.com/). Simply connect your GitHub repository.
 
 ---
-Trigger build for fresh site: perfume-explorer-v2-scoprint
+Auto-build triggered: Monday, June 8, 2026.
