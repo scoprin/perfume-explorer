@@ -3,7 +3,7 @@ const perfumeData = [
         name: "Aventus",
         brand: "Creed",
         year: 2010,
-        image: "https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1592187332897-dc4457f59d6e?auto=format&fit=crop&q=80&w=800",
         description: "A legendary fragrance celebrating strength, power, and success. It opens with an iconic blast of pineapple and black currant.",
         accords: [
             { name: "fruity", value: 95, color: "var(--clr-fresh)" },
@@ -20,7 +20,7 @@ const perfumeData = [
         name: "Baccarat Rouge 540",
         brand: "Maison Francis Kurkdjian",
         year: 2015,
-        image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1512411516752-77254042c902?auto=format&fit=crop&q=80&w=800",
         description: "A poetic alchemy of jasmine, saffron, and amberwood. Known for its airy, crystal-like sweetness and incredible trail.",
         accords: [
             { name: "amber", value: 100, color: "var(--clr-amber)" },
@@ -37,7 +37,7 @@ const perfumeData = [
         name: "Tobacco Vanille",
         brand: "Tom Ford",
         year: 2007,
-        image: "https://images.unsplash.com/photo-1520236060906-9c5ed525b025?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1550266014-9989f53e070c?auto=format&fit=crop&q=80&w=800",
         description: "A warm, opulent journey into a London gentleman's club. Tobacco leaf meets creamy vanilla and spicy accords.",
         accords: [
             { name: "tobacco", value: 95, color: "var(--clr-leather)" },
@@ -71,7 +71,7 @@ const perfumeData = [
         name: "Angels' Share",
         brand: "Kilian Paris",
         year: 2020,
-        image: "https://images.unsplash.com/photo-1605515722661-e5a7ed30c5bf?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800",
         description: "A boozy, gourmand masterpiece inspired by Hennessy cognac cellars. Rich with cinnamon, tonka, and oak.",
         accords: [
             { name: "boozy", value: 95, color: "var(--clr-amber)" },
@@ -105,7 +105,7 @@ const perfumeData = [
         name: "Layton",
         brand: "Parfums de Marly",
         year: 2016,
-        image: "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1550433161-867980537be6?auto=format&fit=crop&q=80&w=800",
         description: "A royal blue aromatic fragrance that balances crisp apple and lavender with a deep, creamy vanilla base.",
         accords: [
             { name: "vanilla", value: 95, color: "var(--clr-vanilla)" },
