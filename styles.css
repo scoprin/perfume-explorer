@@ -1,12 +1,12 @@
 :root {
     --bg-deep: #0a0a0a;
-    --bg-card: #141414;
+    --bg-card: #121212;
     --accent-gold: #c5a059;
     --accent-amber: #ffbf00;
     --text-primary: #f5f5f5;
     --text-secondary: #a0a0a0;
     --border-dim: #222;
-    --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    --shadow: 0 10px 40px rgba(0,0,0,0.8);
     
     /* Accord Colors */
     --clr-woody: #8b5a2b;
@@ -40,62 +40,61 @@ body {
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 40px;
 }
 
 /* Header */
 header {
-    padding: 80px 0 50px;
+    padding: 100px 0 60px;
     text-align: center;
-    background: linear-gradient(to bottom, #111, var(--bg-deep));
+    border-bottom: 1px solid var(--border-dim);
 }
 
 .logo {
     font-family: 'Cinzel', serif;
-    font-size: 3.5rem;
-    letter-spacing: 0.8rem;
+    font-size: 4rem;
+    letter-spacing: 1.2rem;
     color: var(--accent-gold);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 700;
 }
 
 .tagline {
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.5rem;
     color: var(--text-secondary);
-    margin-bottom: 40px;
-    font-size: 0.9rem;
+    margin-bottom: 50px;
+    font-size: 0.85rem;
 }
 
 .search-container {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     position: relative;
 }
 
 #perfumeSearch {
     width: 100%;
-    padding: 18px 30px 18px 60px;
-    background: #1a1a1a;
+    padding: 22px 30px 22px 70px;
+    background: transparent;
     border: 1px solid var(--border-dim);
-    border-radius: 4px;
+    border-radius: 0;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
-    transition: all 0.4s ease;
-    box-shadow: var(--shadow);
+    transition: all 0.5s ease;
 }
 
 #perfumeSearch:focus {
     outline: none;
     border-color: var(--accent-gold);
-    background: #222;
+    background: #111;
 }
 
 .search-icon {
     position: absolute;
-    left: 20px;
+    left: 25px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--accent-gold);
@@ -104,93 +103,76 @@ header {
 /* Grid */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 60px 0;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 80px 0;
 }
 
 /* Card */
 .card {
     background: var(--bg-card);
     border: 1px solid var(--border-dim);
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 40px;
+    transition: all 0.4s ease;
     cursor: pointer;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
 }
 
 .card:hover {
-    transform: translateY(-10px);
     border-color: var(--accent-gold);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
-}
-
-.card-image-container {
-    height: 350px;
-    overflow: hidden;
-    position: relative;
-}
-
-.card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s ease;
-}
-
-.card:hover .card-image {
-    transform: scale(1.1);
-}
-
-.card-info {
-    padding: 25px;
+    box-shadow: var(--shadow);
+    background: #161616;
 }
 
 .card-brand {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
     color: var(--accent-gold);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-weight: 600;
 }
 
 .card-name {
     font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
     color: var(--text-primary);
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
 }
 
 /* Accord Bars */
 .accord-container {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .accord-row {
     display: flex;
     align-items: center;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .accord-label {
-    width: 80px;
-    font-size: 0.65rem;
+    width: 90px;
+    font-size: 0.7rem;
     text-transform: uppercase;
+    letter-spacing: 0.1rem;
     color: var(--text-secondary);
 }
 
 .accord-bar-bg {
     flex-grow: 1;
-    height: 8px;
-    background: #222;
-    border-radius: 4px;
-    overflow: hidden;
+    height: 4px;
+    background: #1a1a1a;
+    border-radius: 0;
 }
 
 .accord-bar-fill {
     height: 100%;
-    border-radius: 4px;
 }
 
 /* Modal */
@@ -205,7 +187,7 @@ header {
 }
 
 .modal-overlay {
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.98);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -214,27 +196,25 @@ header {
 .modal-content {
     position: relative;
     background: var(--bg-card);
-    margin: 2% auto;
+    margin: 5% auto;
     width: 90%;
-    max-width: 1000px;
-    max-height: 90vh;
+    max-width: 800px;
+    max-height: 85vh;
     overflow-y: auto;
     border: 1px solid var(--accent-gold);
-    animation: modalIn 0.5s ease;
-    display: flex;
-    flex-direction: column;
+    animation: modalIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @keyframes modalIn {
-    from { opacity: 0; transform: translateY(30px); }
+    from { opacity: 0; transform: translateY(50px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 .close-button {
     position: absolute;
-    right: 25px;
-    top: 20px;
-    font-size: 35px;
+    right: 30px;
+    top: 25px;
+    font-size: 40px;
     color: var(--text-secondary);
     cursor: pointer;
     z-index: 10;
@@ -246,83 +226,79 @@ header {
 }
 
 .modal-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 50px;
-}
-
-@media (max-width: 800px) {
-    .modal-body { grid-template-columns: 1fr; padding: 30px; }
-}
-
-.modal-image-col img {
-    width: 100%;
-    border-radius: 2px;
-    box-shadow: var(--shadow);
+    padding: 60px;
+    text-align: center;
 }
 
 .modal-brand {
     color: var(--accent-gold);
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    letter-spacing: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .modal-name {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
 
 .modal-desc {
     color: var(--text-secondary);
-    margin-bottom: 30px;
-    font-size: 1rem;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
     font-weight: 300;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Pyramid */
 .pyramid-section {
-    margin-top: 40px;
+    margin-top: 50px;
+    text-align: left;
 }
 
 .pyramid-tier {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .tier-label {
     color: var(--accent-gold);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin-bottom: 10px;
+    letter-spacing: 0.2rem;
+    margin-bottom: 15px;
     border-bottom: 1px solid #333;
-    display: inline-block;
-    padding-bottom: 2px;
+    display: block;
+    padding-bottom: 8px;
 }
 
 .notes-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
+    justify-content: flex-start;
 }
 
 .note-chip {
-    padding: 6px 12px;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    font-size: 0.8rem;
-    color: var(--text-primary);
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--accent-gold);
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 footer {
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
     border-top: 1px solid var(--border-dim);
-    margin-top: 50px;
+    margin-top: 100px;
     color: var(--text-secondary);
     font-size: 0.8rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
 }
