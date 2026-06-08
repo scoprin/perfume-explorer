@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Explorer | Essence & Accords</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ESSENCE</h1>
+            <p class="subtitle">A Curation of Fine Fragrances</p>
+            <div class="search-bar">
+                <input type="text" id="perfumeSearch" placeholder="Search by name, note, or accord...">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="perfumeGrid" class="grid">
+            <!-- Perfume cards will be injected here -->
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
