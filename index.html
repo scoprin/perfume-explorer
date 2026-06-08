@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sillage | Haute Parfumerie Explorer</title>
+    <title>SILLAGE | The Architecture of Niche Scent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 class="logo">SILLAGE</h1>
-            <p class="tagline">The Architecture of Scent</p>
-            <div class="search-container">
-                <input type="text" id="perfumeSearch" placeholder="Search by name, brand, or olfactory notes...">
-                <div class="search-icon">
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </div>
+        <div class="header-content">
+            <h1 class="main-title">SILLAGE</h1>
+            <p class="subtitle">THE ARCHITECTURE OF NICHE SCENT</p>
+            <div class="search-wrapper">
+                <input type="text" id="perfumeSearch" placeholder="Search by name, house, or note..." autocomplete="off">
+                <div class="search-line"></div>
             </div>
         </div>
     </header>
 
     <main class="container">
         <div id="perfumeGrid" class="grid">
-            <!-- Minimalist cards injected here -->
+            <!-- Luxury Cards Injected via JS -->
         </div>
     </main>
 
-    <div id="modal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <div id="modalDetails"></div>
+    <!-- Modal for Detailed View -->
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <button class="close-btn">&times;</button>
+            <div id="modalDetails" class="modal-body"></div>
         </div>
     </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 SILLAGE ARCHIVE. TYPOGRAPHY EDITION.</p>
-        </div>
+        <p>&copy; 2026 SILLAGE ARCHIVE. CURATED EXCELLENCE.</p>
     </footer>
 
     <script src="app.js"></script>

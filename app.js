@@ -1,184 +1,169 @@
 const perfumeData = [
     {
-        "name": "Egoiste",
-        "brand": "Chanel",
-        "year": 2024,
-        "description": "A sophisticated creation from Chanel, blending fine ingredients to create a unique olfactory signature.",
-        "accords": [
-            {
-                "name": "Woody",
-                "value": 81,
-                "color": "#8b5a2b"
-            },
-            {
-                "name": "Amber",
-                "value": 73,
-                "color": "#ff8c00"
-            },
-            {
-                "name": "Musky",
-                "value": 68,
-                "color": "#dcdcdc"
-            }
+        name: "Aventus",
+        brand: "Creed",
+        year: 2010,
+        description: "A legendary powerhouse of blackcurrant, bergamot, and birch smoke. The definitive scent of success and modern masculine elegance.",
+        accords: [
+            { name: "Fruity", val: 95 },
+            { name: "Woody", val: 85 },
+            { name: "Smoky", val: 70 },
+            { name: "Leather", val: 60 }
         ],
-        "pyramid": {
-            "top": [
-                "Petitgrain",
-                "Lime",
-                "Orange"
-            ],
-            "heart": [
-                "Vetiver",
-                "Peony",
-                "Patchouli"
-            ],
-            "base": [
-                "Ambergris",
-                "White Musk",
-                "Castoreum"
-            ]
-        }
+        top: "Pineapple, Bergamot, Blackcurrant, Apple",
+        heart: "Birch, Patchouli, Moroccan Jasmine, Rose",
+        base: "Musk, Oakmoss, Ambergris, Vanille"
     },
     {
-        "name": "Sauvage Elixir",
-        "brand": "Dior",
-        "year": 2022,
-        "description": "A sophisticated creation from Dior, blending fine ingredients to create a unique olfactory signature.",
-        "accords": [
-            {
-                "name": "Citrus",
-                "value": 90,
-                "color": "#ffd700"
-            },
-            {
-                "name": "Floral",
-                "value": 82,
-                "color": "#db7093"
-            },
-            {
-                "name": "Fresh",
-                "value": 64,
-                "color": "#00ced1"
-            }
+        name: "Baccarat Rouge 540",
+        brand: "Maison Francis Kurkdjian",
+        year: 2015,
+        description: "A poetic alchemy of jasmine and saffron, carrying the mineral notes of ambergris and woody tones of freshly cut cedar.",
+        accords: [
+            { name: "Amber", val: 100 },
+            { name: "Woody", val: 90 },
+            { name: "Sweet", val: 80 },
+            { name: "Warm", val: 75 }
         ],
-        "pyramid": {
-            "top": [
-                "Bergamot",
-                "Pink Pepper",
-                "Lemon"
-            ],
-            "heart": [
-                "Lavender",
-                "Rose",
-                "Sandalwood"
-            ],
-            "base": [
-                "Ambroxan",
-                "Oakmoss",
-                "Vanilla"
-            ]
-        }
+        top: "Saffron, Jasmine",
+        heart: "Amberwood, Ambergris",
+        base: "Fir Resin, Cedar"
+    },
+    {
+        name: "Santal 33",
+        brand: "Le Labo",
+        year: 2011,
+        description: "An iconic scent that defines a generation. A smokey wood alloy of sandalwood, cedarwood, cardamom, violet, and papyrus.",
+        accords: [
+            { name: "Woody", val: 100 },
+            { name: "Powdery", val: 85 },
+            { name: "Leather", val: 70 },
+            { name: "Warm", val: 60 }
+        ],
+        top: "Cardamom, Iris, Violet",
+        heart: "Sandalwood, Cedar",
+        base: "Leather, Papyrus, Amber"
+    },
+    {
+        name: "Portrait of a Lady",
+        brand: "Frederic Malle",
+        year: 2010,
+        description: "A baroque, operatic rose. A modern classic containing an unprecedented dose of Turkish rose essence and patchouli.",
+        accords: [
+            { name: "Rose", val: 100 },
+            { name: "Amber", val: 90 },
+            { name: "Patchouli", val: 85 },
+            { name: "Spicy", val: 75 }
+        ],
+        top: "Rose, Clove, Raspberry, Blackcurrant",
+        heart: "Patchouli, Sandalwood, Frankincense",
+        base: "Musk, Benzoin, Amber"
+    },
+    {
+        name: "Angels' Share",
+        brand: "Kilian Paris",
+        year: 2020,
+        description: "Inspired by the cognac-making heritage, this gourmand masterpiece smells of the 'angel's share'—the evaporation from oak barrels.",
+        accords: [
+            { name: "Sweet", val: 100 },
+            { name: "Warm", val: 95 },
+            { name: "Woody", val: 80 },
+            { name: "Boozy", val: 75 }
+        ],
+        top: "Cognac",
+        heart: "Cinnamon, Tonka Bean, Oak",
+        base: "Praline, Vanilla, Sandalwood"
+    },
+    {
+        name: "Oud Wood",
+        brand: "Tom Ford",
+        year: 2007,
+        description: "A pioneering oud fragrance. Smoldering, rare, and exotic; blending rare oud wood, sandalwood, and Chinese pepper.",
+        accords: [
+            { name: "Woody", val: 100 },
+            { name: "Oud", val: 90 },
+            { name: "Warm", val: 80 },
+            { name: "Spicy", val: 70 }
+        ],
+        top: "Sichuan Pepper, Cardamom, Rosewood",
+        heart: "Oud, Sandalwood, Vetiver",
+        base: "Tonka Bean, Vanilla, Amber"
     }
-    // ... dataset continues with 500 real perfumes including Tom Ford Grey Vetiver, Creed Green Irish Tweed, Xerjoff Alexandria II, etc.
 ];
 
 const grid = document.getElementById('perfumeGrid');
 const searchInput = document.getElementById('perfumeSearch');
 const modal = document.getElementById('modal');
 const modalDetails = document.getElementById('modalDetails');
-const closeButton = document.querySelector('.close-button');
+const closeBtn = document.querySelector('.close-btn');
 
-function displayPerfumes(perfumes) {
-    if (!grid) return;
+function renderGrid(perfumes) {
     grid.innerHTML = '';
-    const fragment = document.createDocumentFragment();
     perfumes.forEach(p => {
         const card = document.createElement('div');
         card.className = 'card';
-        const accordHtml = p.accords.map(a => `
-            <div class="accord-row">
-                <div class="accord-label">${a.name}</div>
-                <div class="accord-bar-bg">
-                    <div class="accord-bar-fill" style="width: ${a.value}%; background-color: ${a.color}"></div>
-                </div>
-            </div>
-        `).join('');
         card.innerHTML = `
-            <div class="card-info">
-                <div class="card-brand">${p.brand}</div>
-                <div class="card-name">${p.name}</div>
-                <div class="accord-container">
-                    ${accordHtml}
-                </div>
+            <div class="house">${p.brand}</div>
+            <h3>${p.name}</h3>
+            <div class="accord-container">
+                ${p.accords.slice(0, 3).map(a => `
+                    <div class="accord-row">
+                        <span class="accord-label">${a.name}</span>
+                        <div class="accord-bar-bg">
+                            <div class="accord-bar-fill" style="width: ${a.val}%"></div>
+                        </div>
+                    </div>
+                `).join('')}
             </div>
         `;
-        card.onclick = () => showModal(p);
-        fragment.appendChild(card);
+        card.onclick = () => openModal(p);
+        grid.appendChild(card);
     });
-    grid.appendChild(fragment);
 }
 
-function showModal(p) {
-    if (!modalDetails || !modal) return;
+function openModal(p) {
     modalDetails.innerHTML = `
-        <div class="modal-body">
-            <div class="modal-info-col">
-                <div class="modal-brand">${p.brand} (${p.year})</div>
-                <div class="modal-name">${p.name}</div>
-                <p class="modal-desc">${p.description}</p>
-                <div class="pyramid-section">
-                    <div class="pyramid-tier">
-                        <div class="tier-label">Top Notes</div>
-                        <div class="notes-flex">
-                            ${p.pyramid.top.map(n => '<span class="note-chip">' + n + '</span>').join('')}
-                        </div>
-                    </div>
-                    <div class="pyramid-tier">
-                        <div class="tier-label">Heart Notes</div>
-                        <div class="notes-flex">
-                            ${p.pyramid.heart.map(n => '<span class="note-chip">' + n + '</span>').join('')}
-                        </div>
-                    </div>
-                    <div class="pyramid-tier">
-                        <div class="tier-label">Base Notes</div>
-                        <div class="notes-flex">
-                            ${p.pyramid.base.map(n => '<span class="note-chip">' + n + '</span>').join('')}
-                        </div>
-                    </div>
-                </div>
+        <div class="brand-meta">${p.brand} &bull; ${p.year}</div>
+        <h2>${p.name}</h2>
+        <p class="description">${p.description}</p>
+        <div class="pyramid-grid">
+            <div class="pyramid-tier">
+                <h4>TOP NOTES</h4>
+                <p>${p.top}</p>
+            </div>
+            <div class="pyramid-tier">
+                <h4>HEART NOTES</h4>
+                <p>${p.heart}</p>
+            </div>
+            <div class="pyramid-tier">
+                <h4>BASE NOTES</h4>
+                <p>${p.base}</p>
             </div>
         </div>
     `;
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
 
-let searchTimeout;
-if (searchInput) {
-    searchInput.oninput = (e) => {
-        clearTimeout(searchTimeout);
-        searchTimeout = setTimeout(() => {
-            const term = e.target.value.toLowerCase();
-            const filtered = perfumeData.filter(p => 
-                p.name.toLowerCase().includes(term) ||
-                p.brand.toLowerCase().includes(term) ||
-                p.accords.some(a => a.name.toLowerCase().includes(term)) ||
-                p.pyramid.top.some(n => n.toLowerCase().includes(term)) ||
-                p.pyramid.heart.some(n => n.toLowerCase().includes(term)) ||
-                p.pyramid.base.some(n => n.toLowerCase().includes(term))
-            );
-            displayPerfumes(filtered);
-        }, 200);
-    };
-}
-
 function closeModal() {
-    if (!modal) return;
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
 
-if (closeButton) closeButton.onclick = closeModal;
-window.onclick = (e) => { if (e.target.className === 'modal-overlay' || e.target.className === 'modal') closeModal(); };
+searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase();
+    const filtered = perfumeData.filter(p => 
+        p.name.toLowerCase().includes(term) ||
+        p.brand.toLowerCase().includes(term) ||
+        p.top.toLowerCase().includes(term) ||
+        p.heart.toLowerCase().includes(term) ||
+        p.base.toLowerCase().includes(term)
+    );
+    renderGrid(filtered);
+});
 
-if (grid) displayPerfumes(perfumeData);
+closeBtn.onclick = closeModal;
+window.onclick = (e) => { if (e.target == modal) closeModal(); };
+
+// Initial Load
+renderGrid(perfumeData);
