@@ -51,6 +51,7 @@ export default function Home() {
             </div>
 
             <motion.div 
+                key={selectedBrand + searchQuery}
                 className="grid"
                 variants={containerVariants}
                 initial="hidden"
