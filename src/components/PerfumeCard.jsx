@@ -2,13 +2,18 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function PerfumeCard({ perfume }) {
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    };
+
     return (
         <Link to={`/perfume/${perfume.id}`}>
             <motion.div 
                 className="card"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                variants={itemVariants}
+                whileHover={{ scale: 1.03, rotateY: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
             >
                 <div className="house">{perfume.brand}</div>
                 <h3>{perfume.name}</h3>

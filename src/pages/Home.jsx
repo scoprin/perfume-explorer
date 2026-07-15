@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { perfumes } from '../data/perfumes';
 import PerfumeCard from '../components/PerfumeCard';
+import { motion } from 'framer-motion';
 
 export default function Home() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -14,6 +15,16 @@ export default function Home() {
         const matchesBrand = selectedBrand === 'All' || perfume.brand === selectedBrand;
         return matchesSearch && matchesBrand;
     });
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
 
     return (
         <main className="container">
@@ -39,11 +50,17 @@ export default function Home() {
                 ))}
             </div>
 
-            <div className="grid">
+            <motion.div 
+                className="grid"
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+            >
                 {filteredPerfumes.map(perfume => (
                     <PerfumeCard key={perfume.id} perfume={perfume} />
                 ))}
-            </div>
+            </motion.div>
+            
             {filteredPerfumes.length === 0 && (
                 <p style={{textAlign: 'center', color: 'var(--text-dim)', marginTop: '2rem'}}>No perfumes found.</p>
             )}
